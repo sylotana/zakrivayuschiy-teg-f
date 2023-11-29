@@ -14,7 +14,16 @@
 
 */
 
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font_type_body);
+  font-weight: var(--font_weight_body);
+
+  background-color: var(--color_background);
+  color: var(--color_accent);
+
+  background-image: var(--background_gradient);
+  background-size: cover;
 }
