@@ -30,7 +30,7 @@
 }
 
 .container {
-  width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  max-width: 43.75rem;
   margin-inline: auto;
 }
 
@@ -442,4 +442,8 @@
 .filter-8 {
   filter: blur(10px) contrast(1.7) invert(1);
   clip-path: inset(0);
+}
+
+* {
+  outline: 1px solid red;
 }
