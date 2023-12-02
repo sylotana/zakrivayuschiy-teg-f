@@ -443,7 +443,3 @@
   filter: blur(10px) contrast(1.7) invert(1);
   clip-path: inset(0);
 }
-
-* {
-  outline: 1px solid red;
-}
