@@ -17,8 +17,8 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font_type_body);
-  font-weight: var(--font_weight_body);
+  font-family: var(--font_type_body), sans-serif;
+  font-variation-settings: 'wght' var(--font_weight_body);
 
   background-color: var(--color_background);
   color: var(--color_accent);
@@ -58,7 +58,7 @@
   text-align: center;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: 1;
-  font-family: var(--font_type_accent);
+  font-family: var(--font_type_accent), fantasy;
   margin-block-end: 25px;
 }
 
@@ -87,7 +87,7 @@
   text-transform: uppercase;
   border: none;
   background-color: transparent;
-  font-family: var(--font_type_accent);
+  font-family: var(--font_type_accent), fantasy;
   font-size: 14px;
   line-height: 1;
   cursor: pointer;
@@ -170,7 +170,7 @@
 .card__title {
   font-size: 18px;
   line-height: 22px;
-  font-weight: var(--font_weight_title);
+  font-variation-settings: 'wght' var(--font_weight_title);
   padding-block-start: 5px;
   padding-block-end: 4px;
   padding-inline-start: 10px;
@@ -188,7 +188,7 @@
   top: 25px;
   font-size: 14px;
   line-height: 14px;
-  font-family: var(--font_type_accent);
+  font-family: var(--font_type_accent), fantasy;
   color: var(--color_accent);
   mix-blend-mode: hard-light;
   opacity: 0.5;
@@ -250,7 +250,7 @@
   background-color: var(--color_background);
   padding: 0;
   color: var(--color_accent);
-  font-family: var(--font_type_accent);
+  font-family: var(--font_type_accent), fantasy;
   font-size: 14px;
   line-height: 0.9;
   border: 2px solid var(--color_accent);
@@ -315,7 +315,7 @@
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--color_accent);
+  fill: red;
   transition: fill 1s;
 }
 
@@ -360,10 +360,6 @@
   transition: fill 0.3s linear 0.05s;
 }
 
-.like-icon.is-liked .contour {
-  fill: red;
-}
-
 .like-icon.is-liked .heart {
   animation: 0.3s icon-size ease-in 0.1s;
   animation-play-state: running;
@@ -405,7 +401,7 @@
 .dialog__title {
   text-transform: uppercase;
   font-size: 14px;
-  font-family: var(--font_type_accent);
+  font-family: var(--font_type_accent), fantasy;
   line-height: 1.5;
 }
 
