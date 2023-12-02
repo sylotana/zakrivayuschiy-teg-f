@@ -29,7 +29,6 @@
   padding-block: 100px 103px;
 }
 
-
 .container {
   width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   margin-inline: auto;
@@ -40,7 +39,6 @@
     width: 100%;
   }
 }
-
 
 /* HEADER */
 .header {
@@ -122,7 +120,6 @@
   transform: scaleX(1);
 }
 
-
 .theme-menu__button::before {
   right: 100%;
   margin-inline-end: 4px;
@@ -142,10 +139,7 @@
   opacity: 0.6;
   pointer-events: none;
 }
-
-
 /* END HEADER */
-
 
 
 /* CARDS */
@@ -161,9 +155,6 @@
   gap: 52px;
 }
 
-.cards__list-item {
-
-}
 /* END CARDS */
 
 /* CARD */
@@ -211,8 +202,8 @@
 @supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
   .card__caption {
     -webkit-text-stroke: 1px var(--color_background);
-            text-stroke: 1px var(--color_background);
-            text-shadow: none;
+    text-stroke: 1px var(--color_background);
+    text-shadow: none;
   }
 }
 
@@ -283,9 +274,6 @@
   transform: scaleX(1);
 }
 
-.button__text {
-}
-
 .button {
   cursor: pointer;
   background-color: var(--color_background);
@@ -322,7 +310,6 @@
 .card__icon-button:focus-visible {
   border: 2px solid var(--color_accent);
 }
-
 
 
 /* ICON */
@@ -380,27 +367,10 @@
   fill: red;
 }
 
-.heart {
-}
-
 .like-icon.is-liked .heart {
   animation: 0.3s icon-size ease-in 0.1s;
   animation-play-state: running;
   transform-origin: center;
-}
-
-@keyframes icon-size {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.5);
-  }
-
-  100% {
-    transform: scale(1);
-  }
 }
 
 .sparks {
@@ -411,16 +381,6 @@
   animation: 0.3s sparks ease-in 0.3s;
 }
 
-
-@keyframes sparks {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
 /* END ICON */
 
 .dialog {
