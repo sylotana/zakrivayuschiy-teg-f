@@ -246,6 +246,14 @@
   min-width: 130px;
   padding-block: 17px;
   transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: var(--color_background);
+  padding: 0;
+  color: var(--color_accent);
+  font-family: var(--font_type_accent);
+  font-size: 14px;
+  line-height: 0.9;
+  border: 2px solid var(--color_accent);
 }
 
 .button:focus {
@@ -272,17 +280,6 @@
 
 .button:hover::before {
   transform: scaleX(1);
-}
-
-.button {
-  cursor: pointer;
-  background-color: var(--color_background);
-  padding: 0;
-  color: var(--color_accent);
-  font-family: var(--font_type_accent);
-  font-size: 14px;
-  line-height: 0.9;
-  border: 2px solid var(--color_accent);
 }
 
 .button_save {
