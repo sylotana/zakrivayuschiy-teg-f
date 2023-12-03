@@ -12,6 +12,72 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+/* ICON */
+.contour {
+  transition: fill 0.1s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--color_icon);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon:hover .core {
+  fill: var(--color_accent);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--color_accent);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:active .core {
+  fill: var(--color_icon);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .main-body {
+  fill: var(--color_icon);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--color_icon);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--color_icon);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .heart {
+  animation: 0.3s icon-size ease-in 0.1s alternate;
+  transform-origin: center;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.like-icon.is-liked .sparks {
+  animation: 0.3s sparks ease-in 0.3s;
+}
+/* END ICON */
+
+
 @keyframes arrow {
   0% {
     transform: translateX(0);
@@ -27,12 +93,8 @@
     transform: scale(1);
   }
 
-  50% {
-    transform: scale(1.5);
-  }
-
   100% {
-    transform: scale(1);
+    transform: scale(1.5);
   }
 }
 

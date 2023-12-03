@@ -13,6 +13,7 @@
 
   --color_background: #ffffff;
   --color_accent: #000000;
+  --color_icon: #ff0000;
 
   --background_gradient:
     repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px),

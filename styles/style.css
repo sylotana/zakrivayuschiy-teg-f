@@ -18,13 +18,14 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font_type_body), sans-serif;
-  font-variation-settings: 'wght' var(--font_weight_body);
+  font-variation-settings: "wght" var(--font_weight_body);
 
   background-color: var(--color_background);
   color: var(--color_accent);
 
   background-image: var(--background_gradient);
   background-size: cover;
+  background-attachment: fixed;
 
   padding-block: 100px 103px;
 }
@@ -32,12 +33,6 @@
 .container {
   max-width: 43.75rem;
   margin-inline: auto;
-}
-
-@media (width <= 375px) {
-  .container {
-    width: 100%;
-  }
 }
 
 /* HEADER */
@@ -104,7 +99,7 @@
 }
 
 .theme-menu__button::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
@@ -125,7 +120,7 @@
   margin-inline-end: 4px;
   top: 0;
   position: absolute;
-  content: '▶';
+  content: "▶";
   color: transparent;
   pointer-events: none;
 }
@@ -141,12 +136,12 @@
 }
 /* END HEADER */
 
-
 /* CARDS */
 .cards {
   display: flex;
   flex-direction: column;
   gap: 52px;
+  margin-bottom: 50px;
 }
 
 .cards__list {
@@ -164,13 +159,12 @@
   gap: 2px;
   background-color: var(--color_accent);
   border: 2px solid var(--color_accent);
-  /* background-color: var(--color_background); */
 }
 
 .card__title {
   font-size: 18px;
   line-height: 22px;
-  font-variation-settings: 'wght' var(--font_weight_title);
+  font-variation-settings: "wght" var(--font_weight_title);
   padding-block-start: 5px;
   padding-block-end: 4px;
   padding-inline-start: 10px;
@@ -183,6 +177,7 @@
 }
 
 .card__caption {
+  z-index: 1;
   position: absolute;
   right: 25px;
   top: 25px;
@@ -192,11 +187,8 @@
   color: var(--color_accent);
   mix-blend-mode: hard-light;
   opacity: 0.5;
-  text-shadow:
-    -1px  0px var(--color_background), 
-     0px  1px var(--color_background), 
-     1px  0px var(--color_background), 
-     0px -1px var(--color_background);
+  text-shadow: -1px 0px var(--color_background), 0px 1px var(--color_background),
+    1px 0px var(--color_background), 0px -1px var(--color_background);
 }
 
 @supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
@@ -208,6 +200,8 @@
 }
 
 .card__image {
+  color: var(--color_accent);
+  background-color: var(--color_background);
   display: block;
   width: 100%;
   height: 100%;
@@ -265,7 +259,7 @@
 }
 
 .button::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -282,11 +276,17 @@
   transform: scaleX(1);
 }
 
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .button_save {
   display: flex;
   gap: 8px;
   align-items: center;
-  max-height: 55px;
   padding-block: 15px;
   padding-inline: 19px 21px;
   align-self: center;
@@ -307,74 +307,6 @@
 .card__icon-button:focus-visible {
   border: 2px solid var(--color_accent);
 }
-
-
-/* ICON */
-.contour {
-  transition: fill 0.3s linear 0.06s;
-}
-
-.like-icon.is-liked .contour {
-  fill: red;
-  transition: fill 1s;
-}
-
-.main-body {
-  fill: transparent;
-  transition: fill 0.3s linear;
-}
-
-.core {
-  fill: transparent;
-  transition: fill 0.3s linear 0.03s;
-
-}
-
-.card__icon-button:hover .core {
-  fill: var(--color_accent);
-  transition: fill 0.3s linear;
-}
-
-.card__icon-button:hover .main-body {
-  fill: var(--color_accent);
-  transition: fill 0.3s linear 0.05s;
-}
-
-.card__icon-button:active .core {
-  fill: red;
-  transition: fill 0.3s linear;
-}
-
-.card__icon-button:active .main-body {
-  fill: red;
-  transition: fill 0.3s linear 0.05s;
-}
-
-.like-icon.is-liked .core {
-  fill: red;
-  transition: fill 0.3s linear;
-}
-
-.like-icon.is-liked .main-body {
-  fill: red;
-  transition: fill 0.3s linear 0.05s;
-}
-
-.like-icon.is-liked .heart {
-  animation: 0.3s icon-size ease-in 0.1s;
-  animation-play-state: running;
-  transform-origin: center;
-}
-
-.sparks {
-  opacity: 0;
-}
-
-.like-icon.is-liked .sparks {
-  animation: 0.3s sparks ease-in 0.3s;
-}
-
-/* END ICON */
 
 .dialog {
   background-color: var(--color_background);
@@ -410,36 +342,52 @@
   height: 38px;
 }
 
+
 /* FILTERS */
-.filter-1 {
+.filter-dark {
   filter: contrast(1.2) hue-rotate(-20deg) grayscale(0.7);
 }
 
-.filter-2 {
+.filter-light {
   filter: saturate(1.5) hue-rotate(-10deg) brightness(1.5);
 }
 
-.filter-3 {
+.filter-coloring {
   filter: var(--filter-3);
 }
 
-.filter-4 {
+.filter-sepia {
   filter: hue-rotate(-45deg) sepia(1) contrast(0.5);
 }
 
-.filter-5 {
+.filter-vampire {
   filter: contrast(1.4) saturate(2) hue-rotate(120deg);
 }
 
-.filter-6 {
+.filter-saturate {
   filter: saturate(2) contrast(1.2) brightness(1.5);
 }
 
-.filter-7 {
+.filter-low-contrast {
   filter: brightness(0.9) contrast(0.9) grayscale(0.7) saturate(2) sepia(0.5);
 }
 
-.filter-8 {
+.filter-invert {
   filter: blur(10px) contrast(1.7) invert(1);
   clip-path: inset(0);
+}
+
+@media (width <= 375px) {
+  .container {
+    width: 100%;
+  }
+
+  .button_save {
+    flex-direction: column;
+  }
+
+  .button__inner-icon {
+    width: 28px;
+    height: 28px;
+  }
 }
